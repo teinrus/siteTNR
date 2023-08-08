@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Система учета простоев оборудования</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Система учета простоев оборудования</h1>
+        <p class="tagline">Отслеживайте простои оборудования для оптимизации производственных процессов</p>
+    </header>
+
+    <section class="features">
+        <h2>Преимущества системы учета простоев оборудования</h2>
+        <div class="feature-list">
+            <div class="feature-item">
+                <i class="fas fa-stopwatch"></i>
+                <p>Точное отслеживание времени простоя каждого оборудования</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-file-alt"></i>
+                <p>Автоматическое формирование отчетов о простоях и их причинах</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-chart-line"></i>
+                <p>Анализ эффективности использования оборудования</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-cogs"></i>
+                <p>Удобный интерфейс и простая интеграция</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="slider">
+        <div class="slider-wrapper">
+            <img src="{{ url_for('static', filename='images/image1.jpg') }}" alt="Image 1" class="image">
+            <img src="{{ url_for('static', filename='images/image2.jpg') }}" alt="Image 2" class="image">
+            <img src="{{ url_for('static', filename='images/image3.jpg') }}" alt="Image 3" class="image">
+        </div>
+        <div class="dots-container">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+    </section>
+
+    <section class="description">
+        <h2>О системе учета простоев оборудования</h2>
+        <div class="description-item">
+            <i class="fas fa-cogs"></i>
+            <p>Наша система учета простоев оборудования поможет вашему предприятию повысить эффективность производственных процессов. Система позволяет отслеживать и анализировать время простоя каждого оборудования, определять причины простоев и формировать автоматические отчеты.</p>
+        </div>
+        <div class="description-item">
+            <i class="fas fa-user-cog"></i>
+            <p>Система проста в использовании и интегрируется с вашими текущими производственными системами. Откажитесь от ручного учета времени простоя и получите точные данные для принятия стратегических решений.</p>
+        </div>
+        <div class="description-item">
+            <i class="fas fa-chart-bar"></i>
+            <p>Наша команда инженеров и разработчиков сделала систему учета простоев оборудования максимально простой в использовании. Вы сможете легко настроить систему под свои потребности и получать ежедневные, недельные и месячные отчеты о простоях.</p>
+        </div>
+        <div class="description-item">
+            <i class="fas fa-lock"></i>
+            <p>Мы гарантируем безопасность и конфиденциальность ваших данных. Вся информация о простоях оборудования хранится в зашифрованной базе данных, к которой доступ имеют только авторизованные сотрудники.</p>
+        </div>
+        <div class="description-item">
+            <i class="fas fa-sync-alt"></i>
+            <p>Система учета простоев оборудования предоставляет вам полный контроль над производственными процессами и помогает оптимизировать использование оборудования, что приводит к повышению производительности и снижению затрат.</p>
+        </div>
+        <div class="description-item">
+            <i class="fas fa-external-link-alt"></i>
+            <p>Кроме того, данные, собранные в системе, могут быть легко переданы в другие популярные системы управления, такие как 1С, что обеспечивает еще большую автоматизацию и удобство в управлении вашим предприятием.</p>
+        </div>
+    </section>
+    
+    
+    
+    
+
+    <button class="contact-button" onclick="openModal()">Задайте вопрос</button>
+
+    <footer>
+        <p>© 2023 Система учета простоев оборудования. Все права защищены.</p>
+    </footer>
+
+    <!-- Модальное окно -->
+    <div class="modal" id="sliderImageModal">
+        <span class="close-button" id="closeSliderImageModal">&times;</span>
+        <img class="modal-content" id="sliderModalImage">
+    </div>
+    
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Контактная форма</h2>
+            <form onsubmit="sendMessageInsideModal(); return false;">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required><br>
+
+                <label for="phone">Телефон:</label>
+                <input type="text" id="phone" name="phone" required><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" required></textarea><br>
+
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,321 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Стили для header */
+header {
+    background-color: #008CBA;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+.tagline {
+    font-size: 18px;
+}
+
+
+/* Стили для преимуществ */
+.features {
+    background-color: #f2f2f2;
+    padding: 50px 0;
+}
+.features h2 {
+    text-align: center; /* Выравнивание заголовка по центру */
+    color: #008CBA; /* Замените на нужный цвет из общей цветовой гаммы сайта */
+
+}
+.feature-list {
+    display: flex;
+    flex-wrap: wrap; /* Размещение в нескольких колонках */
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    width: 45%; /* Ширина ячейки, чтобы уместить две в одной строке */
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.feature-item i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #008CBA;
+}
+
+
+
+
+/* Стили для description */
+.description {
+    padding: 40px 0;
+}
+
+.description h2 {
+    text-align: center;
+}
+
+.description p {
+    text-align: justify;
+}
+
+/* Стили для контактной секции */
+.contact {
+    background-color: #008CBA;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.contact h2 {
+    font-size: 24px;
+}
+
+.contact-button {
+    background-color: #fff;
+    color: #008CBA;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.contact-button:hover {
+    background-color: #f2f2f2;
+}
+
+/* Стили для футера */
+footer {
+    background-color: #008CBA;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+/* Стили для секции "description" */
+.description {
+    max-width: 100%;
+    margin:auto;
+    padding: 30px; /* Добавим отступы вокруг контента */
+}
+
+.description h2 {
+    font-size: 2rem;
+    color: #008CBA;
+    margin-bottom: 30px;
+}
+
+.description p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Стили для карточек "description-item" */
+.description-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    max-width: auto;
+    margin: 0 auto;
+}
+
+.description-item i {
+    font-size: 24px;
+    color: #008CBA;
+    margin-right: 10px;
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media screen and (max-width: 768px) {
+    .description {
+        padding: 30px 0;
+    }
+    
+    .description-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .description-item i {
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+/* Стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Чуть более темный фон */
+}
+
+.modal-content {
+    background-color: #f9f9f9; /* Светлый фон */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin: 10% auto; /* Немного уменьшил отступ сверху и снизу */
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    overflow: auto;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px; /* Уменьшил внутренний отступ */
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #008CBA; /* Изменил цвет кнопки */
+    color: white;
+    padding: 12px 24px; /* Увеличил размер кнопки */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+button:hover {
+    background-color: #006380; /* Изменил цвет при наведении */
+}
+
+button[type="submit"] {
+    background-color: #4CAF50; /* Изменил цвет кнопки отправки */
+}
+
+/* Стили для верхнего правого угла */
+.contact-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #008CBA; /* Цвет кнопки */
+    color: white;
+    padding: 12px 24px; /* Размер кнопки */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.contact-button:hover {
+    background-color: #006380; /* Цвет при наведении */
+}
+
+/* Стили для слайдера */
+.slider {
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    overflow: hidden;
+    margin-top: 20px; /* Добавляем отступ сверху */
+
+
+}
+
+.slider-wrapper img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto; /* Добавьте это для центрирования изображений по горизонтали */
+}
+
+.slider-wrapper img {
+    width: 100%;
+    height: auto;
+} 
+
+/* Стили для картинок */
+.image {
+    max-width: 600px;
+    max-height: 600px; /* Максимальная высота изображения */
+    width: auto;
+    height: auto;
+}
+
+/* Стили для точек в слайдере */
+.dots-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #008CBA; /* Измените цвет для активной точки */
+}
