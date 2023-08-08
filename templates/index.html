@@ -35,16 +35,19 @@
 
     <section class="slider">
         <div class="slider-wrapper">
-            <img src="{{ url_for('static', filename='images/image1.jpg') }}" alt="Image 1" class="image">
-            <img src="{{ url_for('static', filename='images/image2.jpg') }}" alt="Image 2" class="image">
-            <img src="{{ url_for('static', filename='images/image3.jpg') }}" alt="Image 3" class="image">
+            <img src="{{ url_for('static', filename='images/image1.jpg') }}" alt="Image 1" class="image" onclick="openSliderImageModal('image1.jpg')">
+            <img src="{{ url_for('static', filename='images/image2.jpg') }}" alt="Image 2" class="image"onclick="openSliderImageModal('image2.jpg')">
+            <img src="{{ url_for('static', filename='images/image3.jpg') }}" alt="Image 3" class="image"onclick="openSliderImageModal('image3.jpg')">
         </div>
         <div class="dots-container">
             <span class="dot"></span>
             <span class="dot"></span>
             <span class="dot"></span>
         </div>
-
+        <div class="modal" id="sliderImageModal">
+            <span class="close sliderClose">&times;</span>
+            <img class="modal-content" id="sliderModalImage">
+        </div>
     </section>
 
     <section class="description">
@@ -86,10 +89,7 @@
     </footer>
 
     <!-- Модальное окно -->
-    <div class="modal" id="sliderImageModal">
-        <span class="close-button" id="closeSliderImageModal">&times;</span>
-        <img class="modal-content" id="sliderModalImage">
-    </div>
+
     
     <div id="myModal" class="modal">
         <div class="modal-content">

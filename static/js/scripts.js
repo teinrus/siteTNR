@@ -4,11 +4,29 @@ function openModal() {
     modal.style.display = "block"; // Показываем модальное окно
 }
 
+    // Открытие модального окна с изображением слайдера
+function openSliderImageModal(imageName) {
+    var modal = document.getElementById("sliderImageModal");
+    var modalImage = document.getElementById("sliderModalImage");
+    modal.style.display = "block";
+    modalImage.src = "/static/images/" + imageName;
+    }
+
+function closeSliderImageModal() {
+    var modal = document.getElementById(modalId);
+    modal.style.display = "none";
+}
 // Закрытие модального окна
 function closeModal() {
     var modal = document.getElementById("myModal");
     modal.style.display = "none"; // Скрываем модальное окно
 }
+
+var closeButton = document.querySelector('.sliderClose');
+closeButton.addEventListener('click', function() {
+  var modal = document.getElementById("sliderImageModal");
+  modal.style.display = "none";
+});
 
 // Отправка сообщения из модального окна
 function sendMessageInsideModal() {
@@ -164,30 +182,12 @@ $(document).ready(function() {
         clearInterval(interval); // Останавливаем автоматическую смену изображений
         interval = setInterval(showNextImage, 10000); // Запускаем автоматическую смену с новым интервалом
     });
-    // Открытие модального окна с изображением слайдера
-function openSliderImageModal(imageUrl) {
-    var modal = document.getElementById("sliderImageModal");
-    var modalImage = document.getElementById("sliderModalImage");
-    modalImage.src = imageUrl;
-    modal.style.display = "block";
-}
+
 
 // Закрытие модального окна с изображением слайдера
-function closeSliderImageModal() {
-    var modal = document.getElementById("sliderImageModal");
-    modal.style.display = "none";
-}
 
-// Обработчик клика на кнопку закрытия нового модального окна
-var closeSliderButton = document.getElementById("closeSliderImageModal");
-closeSliderButton.addEventListener("click", closeSliderImageModal);
 
-// Обработчик клика на изображение слайдера для открытия нового модального окна
-sliderImages.forEach(function(image) {
-    image.addEventListener("click", function() {
-        var imageUrl = this.getAttribute("src");
-        openSliderImageModal(imageUrl);
-    });
-});
+
+
 });
 
